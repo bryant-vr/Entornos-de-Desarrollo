@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bryant Vargas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <h1>Hola, me llamo Bryant Vargas</h1>
+
+  <p>Estudio 1.º de DAM y este es mi primer proyecto.</p>
+
+  <h2>Lo que quiero aprender este curso</h2>
+  <ol>
+    <li>Hacer una aplicación de móvil</li>
+    <li>Entender cómo trabaja un equipo de verdad</li>
+    <li>Conseguir unas prácticas que valgan la pena</li>
+    <li>Aprender a depurar errores yo solo</li>
+  </ol>
+
+  <p>Mi editor es <a href="https://code.visualstudio.com">Visual Studio Code</a>.</p>
+
+  <img src="https://picsum.photos/400/200" alt="Imagen de ejemplo">
+
+  <!-- Esto es un comentario: el navegador no lo muestra -->
+
+  <p><a href="aficiones.html">Ver mis aficiones</a></p>
+
+  <button onclick="saludar()">Púlsame</button>
+  <button onclick="despedir()">Adiós</button>
+
+  <h2 id="marcador">0</h2>
+  <button onclick="sumar()">Sumar 1</button>
+  <button onclick="restar()">Restar 1</button>
+  <button onclick="reiniciar()">Poner a 0</button>
+
+  <button onclick="mostrarSorpresa()">Sorpresa</button>
+
+  <script>
+    function saludar() {
+      alert("Hola, esto lo he programado yo");
+    }
+
+    function despedir() {
+      alert("Hasta luego");
+    }
+
+    let cuenta = 0;
+    function sumar() {
+      cuenta = cuenta + 1;
+      document.getElementById("marcador").textContent = cuenta;
+      if (cuenta === 10) {
+        document.getElementById("marcador").style.color = "red";
+      } else {
+        document.getElementById("marcador").style.color = "";
+      }
+    }
+    function restar() {
+      cuenta = cuenta - 1;
+      document.getElementById("marcador").textContent = cuenta;
+    }
+    function reiniciar() {
+      cuenta = 0;
+      document.getElementById("marcador").textContent = cuenta;
+      document.getElementById("marcador").style.color = "";
+    }
+
+    function mostrarSorpresa() {
+      alert("Lo has arreglado. Bienvenido al oficio.");
+    }
+  </script>
+
+</body>
+</html>
